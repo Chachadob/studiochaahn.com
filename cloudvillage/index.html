@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>구름 마을 Cloud Village · 스튜디오 차안</title>
+<meta name="description" content="구름 마을(Cloud Village) — 무지개 다리 너머 구름 마을에서 우리 강아지를 다시 만나는 완전 무료 게임. 스튜디오 차안(Studio Chaahn).">
+<meta property="og:title" content="구름 마을 Cloud Village">
+<meta property="og:description" content="우리 강아지를 다시 만나는 구름 마을 · Meet your dog again in a village above the clouds">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://studiochaahn.com/cloudvillage/">
+<meta property="og:image" content="https://studiochaahn.com/cloudvillage/assets/icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0c0f13; --panel: #151a20; --line: #2b343f;
+    --fg: #e9edf1; --muted: #8693a1; --accent: #f2a93b; --teal: #13857f;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); line-height: 1.6; word-break: keep-all; overflow-wrap: anywhere;
+    font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+  a { color: inherit; }
+  .top { max-width: 760px; margin: 0 auto; padding: 16px; font-size: 14px; }
+  .top a { color: var(--muted); text-decoration: none; }
+  .top a:hover { color: var(--fg); }
+  .studio { display: inline-flex; align-items: center; gap: 10px; }
+  .studio .mark { display: block; background: #fff; border-radius: 8px; padding: 4px 6px; box-shadow: 0 0 0 1px var(--line); }
+  .studio .mark img { display: block; height: 22px; width: auto; }
+  .studio span:last-child { display: flex; flex-direction: column; line-height: 1.2; color: var(--fg); font-weight: 600; font-size: 14px; }
+  .studio small { color: var(--muted); font-weight: 400; font-size: 12px; }
+  .studio:hover .mark { box-shadow: 0 0 0 2px var(--accent); }
+  main { max-width: 760px; margin: 0 auto; padding: 16px 16px 32px; text-align: center; }
+
+  .sky { position: relative; height: 220px; border-radius: 24px; overflow: hidden; margin: 8px 0 28px;
+    background: linear-gradient(180deg, #8ec9f2 0%, #cfe9fb 65%, #fdf3d8 100%); box-shadow: 0 0 0 2px var(--line); }
+  .cloud { position: absolute; background: #fff; border-radius: 999px; }
+  .cloud::before, .cloud::after { content: ""; position: absolute; background: #fff; border-radius: 999px; }
+  .c1 { width: 140px; height: 40px; left: 12%; top: 62px; }
+  .c1::before { width: 64px; height: 64px; left: 22px; top: -32px; }
+  .c1::after { width: 48px; height: 48px; left: 70px; top: -20px; }
+  .c2 { width: 110px; height: 32px; right: 14%; top: 118px; opacity: .92; }
+  .c2::before { width: 50px; height: 50px; left: 18px; top: -26px; }
+  .c2::after { width: 38px; height: 38px; left: 56px; top: -14px; }
+  .c3 { width: 70px; height: 22px; left: 46%; top: 36px; opacity: .8; }
+  .c3::before { width: 32px; height: 32px; left: 12px; top: -16px; }
+  .c3::after { width: 0; height: 0; }
+
+  h1 { font-size: 30px; margin: 0; }
+  .en { color: var(--muted); font-size: 15px; margin: 2px 0 0; }
+  .tag { display: inline-block; margin-top: 16px; font-size: 13px; padding: 3px 12px; border-radius: 999px; border: 1px solid var(--teal); color: #7fd6cf; }
+
+
+  .icon { width: 112px; height: 112px; border-radius: 26px; display: block; margin: -84px auto 16px; position: relative; box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--line); }
+  .tagline { margin: 14px 0 0; font-size: 18px; }
+  h2 { font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 44px 0 14px; display: flex; align-items: center; gap: 10px; text-align: left; }
+  h2::before { content: ""; width: 4px; height: 16px; background: var(--accent); border-radius: 2px; }
+  .feat { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; text-align: left; }
+  .feat div { padding: 16px; border-radius: 14px; background: var(--panel); border: 2px solid var(--line); border-top: 3px solid #8ec9f2; }
+  .feat b { display: block; margin-bottom: 4px; }
+  .feat p { margin: 0; font-size: 14px; color: #c9d1d9; }
+  .feat .en { font-size: 13px; }
+  ul.links { list-style: none; padding: 0; margin: 0; text-align: left; }
+  ul.links li { margin: 6px 0; }
+  ul.links a { color: var(--accent); text-decoration: none; }
+  ul.links a:hover { text-decoration: underline; }
+  ul.links .todo { color: var(--muted); }
+  footer { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
+  footer nav { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 8px; }
+  footer a { color: var(--fg); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer a.todo { color: var(--muted); pointer-events: none; }
+  footer p { margin: 4px 0; }
+</style>
+</head>
+<body>
+<div class="top"><a class="studio" href="../" aria-label="스튜디오 차안 메인으로"><span class="mark"><img src="../assets/studio_logo.png" alt="" width="720" height="345"></span><span>스튜디오 차안<small>Studio Chaahn</small></span></a></div>
+<main>
+  <div class="sky" aria-hidden="true"><span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span></div>
+  <img class="icon" src="assets/icon.png" alt="" width="256" height="256">
+  <h1>구름 마을</h1>
+  <p class="en">Cloud Village</p>
+  <p class="tagline">무지개 다리 너머 구름 마을에서, 우리 강아지를 다시 만나요.<br>
+    <span class="en">Meet your dog again in a little village above the clouds.</span></p>
+  <span class="tag">완전 무료 · 광고 없음 · 결제 없음 · Free, no ads</span>
+
+  <h2>게임 소개 · About</h2>
+  <div class="feat">
+    <div><b>우리 아이 그대로</b><p>이름, 견종, 털색, 좋아하던 간식까지 적으면 우리 강아지가 구름 마을에서 뛰어놀아요.<br><span class="en">Your dog's name, breed, coat and favourite snack.</span></p></div>
+    <div><b>편지를 주고받아요</b><p>하고 싶던 말을 편지로 보내면 강아지가 읽고 답장을 써 줘요.<br><span class="en">Write a letter, and your dog writes back.</span></p></div>
+    <div><b>놀고, 구경하고</b><p>미끄럼틀, 그네, 온천, 바닷가… 19곳에서 친구들과 놀거나 가만히 지켜볼 수 있어요.<br><span class="en">19 places to play, or simply watch.</span></p></div>
+  </div>
+
+  <h2>안내 · Info</h2>
+  <ul class="links">
+    <!-- 구글 플레이: 출시 후 이 줄을 넣는다 → <li><a href="플레이 주소" target="_blank" rel="noopener">Google Play 에서 받기</a></li> -->
+    <li><a href="https://nice-nautilus-c1f.notion.site/40da27003d54816ba444caf5e3004132" target="_blank" rel="noopener">공개 안내 (개인정보처리방침 · 고객 지원 · 사업자 정보)</a></li>
+    <li>문의 · Contact: <a href="mailto:studiochaahn@gmail.com">studiochaahn@gmail.com</a></li>
+  </ul>
+</main>
+<footer>
+  <nav>
+    <a href="https://nice-nautilus-c1f.notion.site/40da27003d548186a6b7d6d1ee9aeca7" id="privacy" target="_blank" rel="noopener">개인정보처리방침 · Privacy Policy</a>
+    <a href="https://nice-nautilus-c1f.notion.site/40da27003d5481a580fce7956bcfe046" target="_blank" rel="noopener">고객 지원 · Support</a>
+    <a href="mailto:studiochaahn@gmail.com">문의 · Contact</a>
+    <a href="../">스튜디오 차안 · Studio Chaahn</a>
+  </nav>
+  <p>© 2026 스튜디오 차안 (Studio Chaahn)</p>
+</footer>
+</body>
+</html>

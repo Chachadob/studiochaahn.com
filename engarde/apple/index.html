@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>En Garde — 앱으로 돌아가기</title>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#141a1f;color:#eef2f5;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans KR",sans-serif;text-align:center}
+  main{padding:32px 24px;max-width:420px}
+  h1{font-size:22px;margin:0 0 12px}
+  p{font-size:15px;line-height:1.5;color:#b8c2cc;margin:0 0 20px}
+  a.btn{display:inline-block;background:#1e9c8f;color:#fff;text-decoration:none;font-weight:700;padding:14px 28px;border-radius:12px;font-size:16px}
+  .small{font-size:12px;color:#7d8891;margin-top:28px}
+</style>
+</head>
+<body>
+<main>
+  <h1 id="t">En Garde 로 돌아가는 중…</h1>
+  <p id="m">잠시만 기다려 주세요. 자동으로 앱이 열리지 않으면 아래 버튼을 눌러 주세요.</p>
+  <a id="go" class="btn" href="engarde://apple" style="display:none">앱으로 돌아가기</a>
+  <p class="small">Studio Chaahn · 이 페이지는 Apple 로그인 결과를 앱으로 전달하기만 하며 아무것도 저장하지 않습니다.</p>
+</main>
+<script>
+(function(){
+  // Apple Sign in (response_mode=fragment) → #id_token=..&code=..&state=..  또는 #error=user_cancelled_authorize&state=..
+  var q = (location.hash || '').replace(/^#/, '') || (location.search || '').replace(/^\?/, '');
+  var target = 'engarde://apple' + (q ? '?' + q : '?error=missing');
+  var go = document.getElementById('go');
+  go.href = target; go.style.display = 'inline-block';
+  if (!q) {
+    document.getElementById('t').textContent = '로그인 정보가 없습니다';
+    document.getElementById('m').textContent = '앱에서 Apple 로그인을 다시 시도해 주세요.';
+  }
+  try { history.replaceState(null, '', location.pathname); } catch (e) {}   // 토큰이 주소 표시줄 · 기록에 남지 않게
+  setTimeout(function(){ location.replace(target); }, 50);
+})();
+</script>
+</body>
+</html>

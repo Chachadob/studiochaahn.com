@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.studiochaahn.engarde",
+      "sha256_cert_fingerprints": [
+        "76:7F:07:7C:43:F5:CF:47:B5:F4:37:D4:A0:53:22:30:78:5C:3C:6A:51:17:0C:34:8D:7F:8F:E9:AA:04:35:FE"
+      ]
+    }
+  }
+]
