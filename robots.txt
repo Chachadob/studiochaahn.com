@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /engarde/apple/
+Sitemap: https://studiochaahn.com/sitemap.xml
