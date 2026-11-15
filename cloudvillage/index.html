@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>구름 마을 Cloud Village · 스튜디오 차안</title>
 <meta name="description" content="구름 마을(Cloud Village) — 무지개 다리 너머 구름 마을에서 우리 강아지를 다시 만나는 완전 무료 게임. 스튜디오 차안(Studio Chaahn).">
+<link rel="canonical" href="https://studiochaahn.com/cloudvillage/">
+<meta name="theme-color" content="#7fc1ee">
+<meta property="og:site_name" content="스튜디오 차안 · Studio Chaahn">
 <meta property="og:title" content="구름 마을 Cloud Village">
 <meta property="og:description" content="우리 강아지를 다시 만나는 구름 마을 · Meet your dog again in a village above the clouds">
 <meta property="og:type" content="website">
@@ -12,114 +15,146 @@
 <meta property="og:image" content="https://studiochaahn.com/cloudvillage/assets/icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "구름 마을 Cloud Village",
+  "url": "https://studiochaahn.com/cloudvillage/",
+  "image": "https://studiochaahn.com/cloudvillage/assets/icon.png",
+  "description": "무지개 다리 너머 구름 마을에서 우리 강아지를 다시 만나는 완전 무료 게임",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Android",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.studiochaahn.cloudvillage",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+  "author": { "@type": "Organization", "name": "Studio Chaahn", "url": "https://studiochaahn.com/" }
+}
+</script>
 <style>
-  :root {
-    color-scheme: dark;
-    --bg: #0c0f13; --panel: #151a20; --line: #2b343f;
-    --fg: #e9edf1; --muted: #8693a1; --accent: #f2a93b; --teal: #13857f;
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--fg); line-height: 1.6; word-break: keep-all; overflow-wrap: anywhere;
-    font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
-  a { color: inherit; }
-  .top { max-width: 760px; margin: 0 auto; padding: 16px; font-size: 14px; }
-  .top a { color: var(--muted); text-decoration: none; }
-  .top a:hover { color: var(--fg); }
-  .studio { display: inline-flex; align-items: center; gap: 10px; }
-  .studio .mark { display: block; background: #fff; border-radius: 8px; padding: 4px 6px; box-shadow: 0 0 0 1px var(--line); }
-  .studio .mark img { display: block; height: 22px; width: auto; }
-  .studio span:last-child { display: flex; flex-direction: column; line-height: 1.2; color: var(--fg); font-weight: 600; font-size: 14px; }
-  .studio small { color: var(--muted); font-weight: 400; font-size: 12px; }
-  .studio:hover .mark { box-shadow: 0 0 0 2px var(--accent); }
-  main { max-width: 760px; margin: 0 auto; padding: 16px 16px 32px; text-align: center; }
-
-  .sky { position: relative; height: 220px; border-radius: 24px; overflow: hidden; margin: 8px 0 28px;
-    background: linear-gradient(180deg, #8ec9f2 0%, #cfe9fb 65%, #fdf3d8 100%); box-shadow: 0 0 0 2px var(--line); }
+  .sky { position: relative; text-align: center; overflow: hidden; color: #13232c;
+    background: linear-gradient(180deg, #7fc1ee 0%, #c6e5fa 58%, #fdf1d6 100%); }
   .cloud { position: absolute; background: #fff; border-radius: 999px; }
   .cloud::before, .cloud::after { content: ""; position: absolute; background: #fff; border-radius: 999px; }
-  .c1 { width: 140px; height: 40px; left: 12%; top: 62px; }
-  .c1::before { width: 64px; height: 64px; left: 22px; top: -32px; }
-  .c1::after { width: 48px; height: 48px; left: 70px; top: -20px; }
-  .c2 { width: 110px; height: 32px; right: 14%; top: 118px; opacity: .92; }
-  .c2::before { width: 50px; height: 50px; left: 18px; top: -26px; }
-  .c2::after { width: 38px; height: 38px; left: 56px; top: -14px; }
-  .c3 { width: 70px; height: 22px; left: 46%; top: 36px; opacity: .8; }
-  .c3::before { width: 32px; height: 32px; left: 12px; top: -16px; }
-  .c3::after { width: 0; height: 0; }
+  .c1 { width: 170px; height: 46px; left: 6%; top: 70px; }
+  .c1::before { width: 74px; height: 74px; left: 26px; top: -38px; }
+  .c1::after { width: 54px; height: 54px; left: 86px; top: -24px; }
+  .c2 { width: 130px; height: 36px; right: 7%; top: 150px; opacity: .92; }
+  .c2::before { width: 58px; height: 58px; left: 20px; top: -30px; }
+  .c2::after { width: 42px; height: 42px; left: 66px; top: -16px; }
+  .c3 { width: 90px; height: 26px; right: 26%; top: 44px; opacity: .8; }
+  .c3::before { width: 38px; height: 38px; left: 14px; top: -18px; }
+  .sky .wrap { position: relative; z-index: 1; padding-top: 52px; padding-bottom: 60px; }
+  .sky .icon { width: 124px; height: 124px; border-radius: 30px; display: block; margin: 0 auto 20px; box-shadow: 0 14px 34px rgba(30,70,110,.28), 0 0 0 4px #fff; }
+  .sky h1 { margin: 0; font-size: 36px; letter-spacing: -0.03em; }
+  .sky h1 small { display: block; font-size: 15px; font-weight: 500; color: #4b6576; letter-spacing: .02em; }
+  .tagline { margin: 14px auto 0; font-size: 18px; font-weight: 600; max-width: 520px; }
+  .tagline .en { display: block; font-size: 15px; font-weight: 400; color: #4b6576; margin-top: 2px; }
+  .sky .badges { justify-content: center; margin: 18px 0 22px; }
+  .sky .badge { background: rgba(255,255,255,.75); border-color: rgba(19,35,44,.08); color: #3a4a53; }
+  .sky .badge.live { color: #0d6f67; background: rgba(255,255,255,.85); }
+  .sky .store.off { color: #4b6576; box-shadow: inset 0 0 0 1.5px rgba(19,35,44,.18); }
 
-  h1 { font-size: 30px; margin: 0; }
-  .en { color: var(--muted); font-size: 15px; margin: 2px 0 0; }
-  .tag { display: inline-block; margin-top: 16px; font-size: 13px; padding: 3px 12px; border-radius: 999px; border: 1px solid var(--teal); color: #7fd6cf; }
+  .feat { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .feat > div { padding: 22px; border-top: 4px solid #7fc1ee; }
+  .feat b { display: block; font-size: 17px; margin-bottom: 6px; }
+  .feat p { margin: 0; font-size: 14.5px; color: var(--soft); }
+  .feat .en { display: block; font-size: 13px; margin-top: 6px; }
 
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; }
+  .facts div { padding: 18px 10px; border-left: 1px solid var(--line); }
+  .facts div:first-child { border-left: 0; }
+  .facts b { display: block; font-size: 16px; }
+  .facts span { font-size: 12.5px; color: var(--muted); }
 
-  .icon { width: 112px; height: 112px; border-radius: 26px; display: block; margin: -84px auto 16px; position: relative; box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--line); }
-  .tagline { margin: 14px 0 0; font-size: 18px; }
-  h2 { font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 44px 0 14px; display: flex; align-items: center; gap: 10px; text-align: left; }
-  h2::before { content: ""; width: 4px; height: 16px; background: var(--accent); border-radius: 2px; }
-  .feat { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; text-align: left; }
-  .feat div { padding: 16px; border-radius: 14px; background: var(--panel); border: 2px solid var(--line); border-top: 3px solid #8ec9f2; }
-  .feat b { display: block; margin-bottom: 4px; }
-  .feat p { margin: 0; font-size: 14px; color: #c9d1d9; }
-  .feat .en { font-size: 13px; }
-  ul.links { list-style: none; padding: 0; margin: 0; text-align: left; }
-  ul.links li { margin: 6px 0; }
-  ul.links a { color: var(--accent); text-decoration: none; }
-  ul.links a:hover { text-decoration: underline; }
-  ul.links .todo { color: var(--muted); }
-  footer { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
-  footer nav { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 8px; }
-  footer a { color: var(--fg); text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-  footer a.todo { color: var(--muted); pointer-events: none; }
-  footer p { margin: 4px 0; }
+  .links { list-style: none; margin: 0; padding: 4px 0; }
+  .links li + li { border-top: 1px solid var(--line); }
+  .links a { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 15px 22px; text-decoration: none; font-size: 15px; }
+  .links a::after { content: "↗"; color: var(--muted); }
+  .links a[href^="mailto"]::after { content: "✉"; }
+  .links a:hover { background: var(--surface2); }
+  .links .en { font-size: 13px; }
 
+  @media (max-width: 760px) { .feat { grid-template-columns: 1fr; gap: 10px; } .feat > div { padding: 16px 18px; } }
   @media (max-width: 560px) {
-    .sky { height: 150px; margin-bottom: 24px; }
-    .icon { width: 92px; height: 92px; border-radius: 22px; margin-top: -70px; }
-    h1 { font-size: 26px; }
-    .tagline { font-size: 16px; }
-    h2 { margin: 32px 0 10px; }
-    .feat { gap: 8px; }
-    .feat div { padding: 11px 13px; border-radius: 12px; }
-    .feat b { font-size: 15px; margin-bottom: 2px; }
-    .feat p { font-size: 13px; line-height: 1.5; }
-    .feat .en { font-size: 12px; }
+    .sky .wrap { padding-top: 36px; padding-bottom: 48px; }
+    .sky .icon { width: 96px; height: 96px; border-radius: 24px; }
+    .sky h1 { font-size: 30px; }
+    .tagline { font-size: 16.5px; }
+    .c2 { top: 120px; } .c3 { display: none; }
+    .facts { grid-template-columns: repeat(2, 1fr); }
+    .facts div:nth-child(3) { border-left: 0; }
+    .facts div:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .links a { padding: 14px 18px; }
   }
 </style>
 </head>
 <body>
-<div class="top"><a class="studio" href="../" aria-label="스튜디오 차안 메인으로"><span class="mark"><img src="../assets/studio_logo.png" alt="" width="720" height="345"></span><span>스튜디오 차안<small>Studio Chaahn</small></span></a></div>
-<main>
-  <div class="sky" aria-hidden="true"><span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span></div>
-  <img class="icon" src="assets/icon.png" alt="" width="256" height="256">
-  <h1>구름 마을</h1>
-  <p class="en">Cloud Village</p>
-  <p class="tagline">무지개 다리 너머 구름 마을에서, 우리 강아지를 다시 만나요.<br>
-    <span class="en">Meet your dog again in a little village above the clouds.</span></p>
-  <span class="tag">완전 무료 · 광고 없음 · 결제 없음 · Free, no ads</span>
-
-  <h2>게임 소개 · About</h2>
-  <div class="feat">
-    <div><b>우리 아이 그대로</b><p>이름, 견종, 털색, 좋아하던 간식까지 적으면 우리 강아지가 구름 마을에서 뛰어놀아요.<br><span class="en">Your dog's name, breed, coat and favourite snack.</span></p></div>
-    <div><b>편지를 주고받아요</b><p>하고 싶던 말을 편지로 보내면 강아지가 읽고 답장을 써 줘요.<br><span class="en">Write a letter, and your dog writes back.</span></p></div>
-    <div><b>놀고, 구경하고</b><p>미끄럼틀, 그네, 온천, 바닷가… 23곳에서 친구들과 놀거나 가만히 지켜볼 수 있어요.<br><span class="en">23 places to play, or simply watch.</span></p></div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="스튜디오 차안 메인으로"><span class="mark"><img src="../assets/studio_logo.png" alt="" width="720" height="345"></span><span>스튜디오 차안<small>Studio Chaahn</small></span></a>
+    <nav aria-label="메뉴"><a href="#about">소개</a><a href="#info">안내</a><a href="../">스튜디오</a></nav>
   </div>
+</header>
 
-  <h2>안내 · Info</h2>
-  <ul class="links">
-    <li><a href="https://play.google.com/store/apps/details?id=com.studiochaahn.cloudvillage" target="_blank" rel="noopener">Google Play 에서 받기 · Get it on Google Play</a></li>
-    <li><a href="https://nice-nautilus-c1f.notion.site/40da27003d54816ba444caf5e3004132" target="_blank" rel="noopener">공개 안내 (개인정보처리방침 · 고객 지원 · 사업자 정보)</a></li>
-    <li>문의 · Contact: <a href="mailto:studiochaahn@gmail.com">studiochaahn@gmail.com</a></li>
-  </ul>
+<section class="sky">
+  <span class="cloud c1" aria-hidden="true"></span><span class="cloud c2" aria-hidden="true"></span><span class="cloud c3" aria-hidden="true"></span>
+  <div class="wrap">
+    <img class="icon" src="assets/icon.png" alt="" width="256" height="256">
+    <h1>구름 마을<small>Cloud Village</small></h1>
+    <p class="tagline">무지개 다리 너머 구름 마을에서, 우리 강아지를 다시 만나요.<span class="en">Meet your dog again in a little village above the clouds.</span></p>
+    <div class="badges"><span class="badge live">완전 무료 · 광고 없음 · 결제 없음</span></div>
+    <!-- iOS 출시 후: App Store 버튼의 class="store off" 를 "store" 로 바꾸고 <span> 을 <a href="앱스토어 주소" target="_blank" rel="noopener"> 로, 작은 글자를 '받기'로 -->
+    <div class="stores">
+      <a class="store" href="https://play.google.com/store/apps/details?id=com.studiochaahn.cloudvillage" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.8v18.4c0 .6.6.9 1.1.6l15.4-9.2c.5-.3.5-1 0-1.3L5.1 2.2C4.6 1.9 4 2.2 4 2.8Z"/></svg><span><small>무료로 받기 · Get it on</small><b>Google Play</b></span></a>
+      <span class="store off" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.8-3.5.8-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.6ZM14.1 5.6c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3Z"/></svg><span><small>곧 출시 · Coming soon</small><b>App Store</b></span></span>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="sec" id="about">
+    <h2 class="sec-title">게임 소개 <span class="en">About</span></h2>
+    <div class="feat">
+      <div class="panel"><b>우리 아이 그대로</b><p>이름, 견종, 털색, 좋아하던 간식까지 적으면 우리 강아지가 구름 마을에서 뛰어놀아요.<span class="en">Your dog's name, breed, coat and favourite snack.</span></p></div>
+      <div class="panel"><b>편지를 주고받아요</b><p>하고 싶던 말을 편지로 보내면 강아지가 읽고 답장을 써 줘요.<span class="en">Write a letter, and your dog writes back.</span></p></div>
+      <div class="panel"><b>놀고, 구경하고</b><p>미끄럼틀, 그네, 온천, 바닷가… 23곳에서 친구들과 놀거나 가만히 지켜볼 수 있어요.<span class="en">23 places to play, or simply watch.</span></p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="facts panel">
+      <div><b>완전 무료</b><span>Free</span></div>
+      <div><b>광고 없음</b><span>No ads</span></div>
+      <div><b>결제 없음</b><span>No purchases</span></div>
+      <div><b>놀 곳 23곳</b><span>23 places</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="info">
+    <h2 class="sec-title">안내 <span class="en">Info</span></h2>
+    <ul class="links panel">
+      <li><a href="https://play.google.com/store/apps/details?id=com.studiochaahn.cloudvillage" target="_blank" rel="noopener"><span>Google Play 에서 받기 <span class="en">Get it on Google Play</span></span></a></li>
+      <li><a href="https://nice-nautilus-c1f.notion.site/40da27003d54816ba444caf5e3004132" target="_blank" rel="noopener"><span>공개 안내 <span class="en">개인정보처리방침 · 고객 지원 · 사업자 정보</span></span></a></li>
+      <li><a href="mailto:contact@studiochaahn.com"><span>문의 <span class="en">contact@studiochaahn.com</span></span></a></li>
+    </ul>
+  </section>
 </main>
-<footer>
-  <nav>
-    <a href="https://nice-nautilus-c1f.notion.site/40da27003d548186a6b7d6d1ee9aeca7" id="privacy" target="_blank" rel="noopener">개인정보처리방침 · Privacy Policy</a>
-    <a href="https://nice-nautilus-c1f.notion.site/40da27003d5481a580fce7956bcfe046" target="_blank" rel="noopener">고객 지원 · Support</a>
-    <a href="mailto:studiochaahn@gmail.com">문의 · Contact</a>
-    <a href="../">스튜디오 차안 · Studio Chaahn</a>
-  </nav>
-  <p>© 2026 스튜디오 차안 (Studio Chaahn)</p>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <nav aria-label="정책">
+      <a href="https://nice-nautilus-c1f.notion.site/40da27003d548186a6b7d6d1ee9aeca7" id="privacy" target="_blank" rel="noopener">개인정보처리방침 · Privacy Policy</a>
+      <a href="https://nice-nautilus-c1f.notion.site/40da27003d5481a580fce7956bcfe046" target="_blank" rel="noopener">고객 지원 · Support</a>
+      <a href="../">스튜디오 차안 · Studio Chaahn</a>
+    </nav>
+    <div class="biz">
+      <p><span>스튜디오 차안</span><span>대표 차성욱</span></p>
+      <p><span>사업자등록번호 237-57-01075</span><span>통신판매업 신고 제2026-서울서초-3616호</span></p>
+      <p><span>문의 <a href="mailto:contact@studiochaahn.com">contact@studiochaahn.com</a></span><span><a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2375701075" target="_blank" rel="noopener">사업자정보 확인</a></span></p>
+    </div>
+    <p class="copy">© 2026 스튜디오 차안 (Studio Chaahn)</p>
+  </div>
 </footer>
 </body>
 </html>
