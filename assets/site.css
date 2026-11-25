@@ -69,7 +69,8 @@ img { max-width: 100%; }
 .store b { font-size: 16px; }
 .store.off { background: transparent; color: var(--muted); box-shadow: inset 0 0 0 1.5px var(--line); pointer-events: none; }
 .stores { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-.stores .store { width: 224px; box-sizing: border-box; } /* 스토어 버튼 두 개 폭을 같게 */
+.stores .store { width: 224px; box-sizing: border-box; justify-content: center; } /* 스토어 버튼 두 개 폭을 같게, 내용은 가운데 */
+.stores .store span { text-align: left; }
 
 /* 카드 공통 */
 .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
