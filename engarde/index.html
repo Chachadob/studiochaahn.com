@@ -63,7 +63,7 @@
   .links { list-style: none; margin: 0; padding: 4px 0; }
   .links li + li { border-top: 1px solid var(--line); }
   .links a { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 15px 22px; text-decoration: none; font-size: 15px; }
-  .links a::after { content: "↗"; color: var(--muted); }
+  .links a::after { content: "→"; color: var(--muted); }
   .links a[href^="mailto"]::after { content: "✉"; }
   .links a:hover { background: var(--surface2); }
   .links .en { font-size: 13px; }
@@ -126,9 +126,10 @@
   <section class="sec" id="info">
     <h2 class="sec-title">안내 <span class="en">Info</span></h2>
     <ul class="links panel">
-      <li><a href="https://nice-nautilus-c1f.notion.site/En-Garde-400a27003d5481998990e9c5ffd06b6a" target="_blank" rel="noopener"><span>공개 안내 <span class="en">고객 지원 · 계정 삭제 · 사업자 정보</span></span></a></li>
-      <li><a href="https://nice-nautilus-c1f.notion.site/400a27003d5481b7aa9bf8f580a8de9e" target="_blank" rel="noopener"><span>이용약관 <span class="en">Terms of Service</span></span></a></li>
-      <li><a href="https://nice-nautilus-c1f.notion.site/400a27003d5481f0af55d4309e4fd856" target="_blank" rel="noopener"><span>개인정보처리방침 <span class="en">Privacy Policy</span></span></a></li>
+      <li><a href="support/"><span>고객 지원 <span class="en">Support</span></span></a></li>
+      <li><a href="terms/"><span>이용약관 <span class="en">Terms of Service</span></span></a></li>
+      <li><a href="privacy/"><span>개인정보 처리방침 <span class="en">Privacy Policy</span></span></a></li>
+      <li><a href="delete-account/"><span>계정 삭제 안내 <span class="en">Account Deletion</span></span></a></li>
       <li><a href="mailto:contact@studiochaahn.com"><span>문의 <span class="en">contact@studiochaahn.com</span></span></a></li>
     </ul>
   </section>
@@ -137,10 +138,11 @@
 <footer class="site-foot">
   <div class="wrap">
     <nav aria-label="정책">
-      <a href="https://nice-nautilus-c1f.notion.site/400a27003d5481f0af55d4309e4fd856" id="privacy" target="_blank" rel="noopener">개인정보처리방침 · Privacy Policy</a>
-      <a href="https://nice-nautilus-c1f.notion.site/400a27003d5481b7aa9bf8f580a8de9e" target="_blank" rel="noopener">이용약관 · Terms</a>
-      <a href="https://nice-nautilus-c1f.notion.site/En-Garde-400a27003d5481998990e9c5ffd06b6a" target="_blank" rel="noopener">고객 지원 · Support</a>
-      <a href="../">스튜디오 차안 · Studio Chaahn</a>
+      <a href="privacy/" id="privacy">개인정보 처리방침 (Privacy Policy)</a>
+      <a href="terms/">이용약관 (Terms)</a>
+      <a href="support/">고객 지원 (Support)</a>
+      <a href="delete-account/">계정 삭제 (Account Deletion)</a>
+      <a href="../">스튜디오 차안 (Studio Chaahn)</a>
     </nav>
     <div class="biz">
       <p><span>스튜디오 차안</span><span>대표 차성욱</span></p>
