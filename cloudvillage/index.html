@@ -70,7 +70,7 @@
   .links { list-style: none; margin: 0; padding: 4px 0; }
   .links li + li { border-top: 1px solid var(--line); }
   .links a { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 15px 22px; text-decoration: none; font-size: 15px; }
-  .links a::after { content: "↗"; color: var(--muted); }
+  .links a::after { content: "→"; color: var(--muted); }
   .links a[href^="mailto"]::after { content: "✉"; }
   .links a:hover { background: var(--surface2); }
   .links .en { font-size: 13px; }
@@ -133,9 +133,8 @@
   <section class="sec" id="info">
     <h2 class="sec-title">안내 <span class="en">Info</span></h2>
     <ul class="links panel">
-      <li><a href="https://apps.apple.com/app/id6832272038" target="_blank" rel="noopener"><span>App Store 에서 받기 <span class="en">Download on the App Store</span></span></a></li>
-      <li><a href="https://play.google.com/store/apps/details?id=com.studiochaahn.cloudvillage" target="_blank" rel="noopener"><span>Google Play 에서 받기 <span class="en">Get it on Google Play</span></span></a></li>
-      <li><a href="https://nice-nautilus-c1f.notion.site/40da27003d54816ba444caf5e3004132" target="_blank" rel="noopener"><span>공개 안내 <span class="en">개인정보처리방침 · 고객 지원 · 사업자 정보</span></span></a></li>
+      <li><a href="support/"><span>고객 지원 <span class="en">Support</span></span></a></li>
+      <li><a href="privacy/"><span>개인정보 처리방침 <span class="en">Privacy Policy</span></span></a></li>
       <li><a href="mailto:contact@studiochaahn.com"><span>문의 <span class="en">contact@studiochaahn.com</span></span></a></li>
     </ul>
   </section>
@@ -144,9 +143,9 @@
 <footer class="site-foot">
   <div class="wrap">
     <nav aria-label="정책">
-      <a href="https://nice-nautilus-c1f.notion.site/40da27003d548186a6b7d6d1ee9aeca7" id="privacy" target="_blank" rel="noopener">개인정보처리방침 · Privacy Policy</a>
-      <a href="https://nice-nautilus-c1f.notion.site/40da27003d5481a580fce7956bcfe046" target="_blank" rel="noopener">고객 지원 · Support</a>
-      <a href="../">스튜디오 차안 · Studio Chaahn</a>
+      <a href="support/">고객 지원 (Support)</a>
+      <a href="privacy/" id="privacy">개인정보 처리방침 (Privacy Policy)</a>
+      <a href="../">스튜디오 차안 (Studio Chaahn)</a>
     </nav>
     <div class="biz">
       <p><span>스튜디오 차안</span><span>대표 차성욱</span></p>
