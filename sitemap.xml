@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://studiochaahn.com/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://studiochaahn.com/cloudvillage/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://studiochaahn.com/cloudvillage/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://studiochaahn.com/engarde/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://studiochaahn.com/engarde/privacy/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://studiochaahn.com/engarde/terms/</loc><lastmod>2026-11-25</lastmod></url>
@@ -11,4 +11,8 @@
   <url><loc>https://studiochaahn.com/engarde/terms/en/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://studiochaahn.com/engarde/privacy/en/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://studiochaahn.com/engarde/delete-account/en/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://studiochaahn.com/cloudvillage/support/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://studiochaahn.com/cloudvillage/support/en/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://studiochaahn.com/cloudvillage/privacy/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://studiochaahn.com/cloudvillage/privacy/en/</loc><lastmod>2026-11-25</lastmod></url>
 </urlset>
